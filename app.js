@@ -1,3 +1,5 @@
+// TODO tab title name should be whatever it is we are converting
+
 const temp = ["fahrenheit",  "celsius", "kelvin", "rankine", "réaumur", "delisle", "rømer", "newton"];
 
 const inputValue = document.querySelector('.input-field');
@@ -245,6 +247,40 @@ function compute() {
       outputValue.value = ((parseFloat(inputValue.value)*(33/80))).toFixed(4);
     break;
 
+  // delisle to fahrenheit
+    case inputID === temp[5] && outputID === temp[0]:
+      outputValue.value = ((212-(parseFloat(inputValue.value*6/5)))).toFixed(4);
+    break;
+
+  // delisle to celsius
+    case inputID === temp[5] && outputID === temp[1]:
+      outputValue.value = ((100-(parseFloat(inputValue.value)*(2/3)))).toFixed(4);
+    break;
+
+  // delisle to kelvin
+    case inputID === temp[5] && outputID === temp[2]:
+      outputValue.value = ((373.15-parseFloat(inputValue.value)*(2/3))).toFixed(4);
+    break;
+
+  // delisle to rankine
+    case inputID === temp[5] && outputID === temp[3]:
+      outputValue.value = ((671.67-parseFloat(inputValue.value)*(6/5))).toFixed(4);
+    break;
+
+  // delisle to réaumur
+    case inputID === temp[5] && outputID === temp[4]:
+      outputValue.value = ((80-parseFloat(inputValue.value)*(8/15))).toFixed(4);
+    break;
+
+  // delisle to rømer
+    case inputID === temp[5] && outputID === temp[6]:
+      outputValue.value = ((60-parseFloat(inputValue.value)*(7/20))).toFixed(4);
+    break;
+
+  // delisle to newton
+    case inputID === temp[5] && outputID === temp[7]:
+      outputValue.value = ((33-parseFloat(inputValue.value)*(11/50))).toFixed(4);
+    break;
 
     default:
       console.log("not working");

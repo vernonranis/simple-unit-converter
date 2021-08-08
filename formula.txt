@@ -38,13 +38,13 @@
 *réaumur to rømer
 *réaumur to newton
 
-delisle to fahrenheit
-delisle to celsius
-delisle to kelvin
-delisle to réaumur
-delisle to rankine
-delisle to rømer
-delisle to newton
+*delisle to fahrenheit
+*delisle to celsius
+*delisle to kelvin
+*delisle to réaumur
+*delisle to rankine
+*delisle to rømer
+*delisle to newton
 
 rømer to fahrenheit
 rømer to celsius
