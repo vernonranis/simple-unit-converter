@@ -149,6 +149,36 @@ function compute() {
       outputValue.value = (parseFloat(inputValue.value)-(273.15)).toFixed(2);
     break;
 
+  //  kelvin to rankine
+    case inputID === temp[2] && outputID === temp[3]:
+      outputValue.value = (parseFloat(inputValue.value)*(9/5)).toFixed(2);
+    break;
+
+  //  kelvin to réaumur
+    case inputID === temp[2] && outputID === temp[4]:
+      outputValue.value = (parseFloat(inputValue.value-273.15)*(4/5)).toFixed(2);
+    break;
+
+  //  kelvin to delisle
+    case inputID === temp[2] && outputID === temp[5]:
+      outputValue.value = ((373.15-parseFloat(inputValue.value))*(3/2)).toFixed(2);
+    break;
+
+  //  kelvin to rømer
+    case inputID === temp[2] && outputID === temp[6]:
+      outputValue.value = ((parseFloat(inputValue.value)-273.15)*21/40+7.5).toFixed(2);
+    break;
+
+  //  kelvin to newton
+    case inputID === temp[2] && outputID === temp[7]:
+      outputValue.value = ((parseFloat(inputValue.value)-273.15)*33/100).toFixed(2);
+    break;
+
+  //  rankine to fahrenheit
+    case inputID === temp[3] && outputID === temp[0]:
+      outputValue.value = ((parseFloat(inputValue.value)-459.67)).toFixed(2);
+    break;
+
     default:
       console.log("not working");
       outputValue.value = (" ");
