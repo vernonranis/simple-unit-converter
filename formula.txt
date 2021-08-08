@@ -1,0 +1,63 @@
+*fahrenheit to celsius
+*fahrenheit to kelvin
+*fahrenheit to rankine
+*fahrenheit to réaumur
+*fahrenheit to delisle
+*fahrenheit to rømer
+*fahrenheit to newton
+
+*celsius to fahrenheit
+*celsius to kelvin
+*celsius to rankine
+*celsius to réaumur
+*celsius to delisle
+*celsius to rømer
+*celsius to newton
+
+*kelvin to fahrenheit
+*kelvin to celsius
+*kelvin to rankine
+*kelvin to réaumur
+*kelvin to delisle
+*kelvin to rømer
+*kelvin to newton
+
+*rankine to fahrenheit
+*rankine to celsius
+*rankine to kelvin
+*rankine to réaumur
+*rankine to delisle
+*rankine to rømer
+*rankine to newton
+
+*réaumur to fahrenheit
+*réaumur to celsius
+*réaumur to kelvin
+*réaumur to rankine
+*réaumur to delisle
+*réaumur to rømer
+*réaumur to newton
+
+delisle to fahrenheit
+delisle to celsius
+delisle to kelvin
+delisle to réaumur
+delisle to rankine
+delisle to rømer
+delisle to newton
+
+rømer to fahrenheit
+rømer to celsius
+rømer to kelvin
+rømer to réaumur
+rømer to rankine
+rømer to delisle
+rømer to newton
+
+newton to fahrenheit
+newton to celsius
+newton to kelvin
+newton to réaumur
+newton to rankine
+newton to delisle
+newton to rømer
