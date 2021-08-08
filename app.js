@@ -1,7 +1,9 @@
 const temp = ["fahrenheit",  "celsius", "kelvin", "rankine", "réaumur", "delisle", "rømer", "newton"];
 
 const inputValue = document.querySelector('.input-field');
+const inputValueArray = document.querySelectorAll('.input-option option');
 const outputValue = document.querySelector('.output-field');
+
 
 document.querySelector(".btn").addEventListener("click", () =>{
   const inputType = document.querySelector(".input-option").value;
@@ -15,6 +17,20 @@ document.querySelector(".btn").addEventListener("click", () =>{
   }
 });
 
+  // const selectedInputID = document.querySelector("#input-selected");
+  // console.log(selectedInputID.value);
+
+// for (let index = 0; index < inputValueArray.length; index++) {
+//   const element = inputValueArray[index];
+//   const selectedInputID = document.querySelector("#input-selected");
+//   const selectedOutputID = document.querySelector("#output-selected");
+//   // document.querySelectorAll(".input-option option")[index].removeAttribute("disabled", "true");
+  
+//   if (selectedInputID.value === temp[index]) {
+//     document.querySelectorAll(".output-option option")[index].setAttribute("disabled", "true");
+//     break
+//   }
+// }
 
 function updateSelectedOption() {
   const currentInputOption = document.querySelector(".input-option").value;
@@ -53,16 +69,86 @@ function compute() {
   const outputID = document.querySelector("#output-selected").value;
 
   switch (true) {
+     // fahrenheit to celsius
     case inputID === temp[0] && outputID === temp[1]:
       outputValue.value = ((5/9)*(parseFloat(inputValue.value)-32)).toFixed(2);
-      console.log("case 0");
+      break;
+
+    // fahrenheit to kelvin
+    case inputID === temp[0] && outputID === temp[2]:
+      outputValue.value = ((parseFloat(inputValue.value)-32)*(5/9)+273.15).toFixed(2);
     break;
-    
+
+    // fahrenheit to rankine
+    case inputID === temp[0] && outputID === temp[3]:
+      outputValue.value = (parseFloat(inputValue.value)+459.67).toFixed(2);
+    break;
+
+    // fahrenheit to réaumur
+    case inputID === temp[0] && outputID === temp[4]:
+      outputValue.value = ((parseFloat(inputValue.value)-32)*(4/9)).toFixed(2);
+    break;
+
+    // fahrenheit to delisle
+    case inputID === temp[0] && outputID === temp[5]:
+      outputValue.value = ((212-parseFloat(inputValue.value))*(5/6)).toFixed(2);
+    break;
+
+    // fahrenheit to rømer
+    case inputID === temp[0] && outputID === temp[6]:
+      outputValue.value = ((parseFloat(inputValue.value)-32)*(7/24)+7.5).toFixed(2);
+    break;
+
+    // fahrenheit to newton
+    case inputID === temp[0] && outputID === temp[7]:
+      outputValue.value = ((parseFloat(inputValue.value)-32)*(11/60)).toFixed(2);
+    break;
+
+   // celsius to fahrenheit
     case inputID === temp[1] && outputID === temp[0]:
       outputValue.value = ((parseFloat(inputValue.value)*(9/5)+32)).toFixed(2);
-      console.log("case 1");
     break;
-  
+
+   // celsius to kelvin
+    case inputID === temp[1] && outputID === temp[2]:
+      outputValue.value = ((parseFloat(inputValue.value)+273.15)).toFixed(2);
+    break;
+
+   // celsius to rankine
+    case inputID === temp[1] && outputID === temp[3]:
+      outputValue.value = ((parseFloat(inputValue.value)+273.15)*(9/5)).toFixed(2);
+    break;
+
+   // celsius to réaumur
+    case inputID === temp[1] && outputID === temp[4]:
+      outputValue.value = ((parseFloat(inputValue.value))*(4/5)).toFixed(2);
+    break;
+
+   // celsius to delisle
+    case inputID === temp[1] && outputID === temp[5]:
+      outputValue.value = ((100-parseFloat(inputValue.value))*(3/2)).toFixed(2);
+    break;
+
+   // celsius to rømer
+    case inputID === temp[1] && outputID === temp[6]:
+      outputValue.value = ((parseFloat(inputValue.value))*(21/40)+7.5).toFixed(2);
+    break;
+
+   // celsius to newton
+    case inputID === temp[1] && outputID === temp[7]:
+      outputValue.value = ((parseFloat(inputValue.value))*(33/100)).toFixed(2);
+    break;
+
+  //  kelvin to fahrenheit
+    case inputID === temp[2] && outputID === temp[0]:
+      outputValue.value = (parseFloat(inputValue.value)*(9/5-459.67)).toFixed(2);
+    break;
+
+  //  kelvin to celsius
+    case inputID === temp[2] && outputID === temp[1]:
+      outputValue.value = (parseFloat(inputValue.value)-(273.15)).toFixed(2);
+    break;
+
     default:
       console.log("not working");
       outputValue.value = (" ");
