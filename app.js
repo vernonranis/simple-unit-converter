@@ -282,6 +282,76 @@ function compute() {
       outputValue.value = ((33-parseFloat(inputValue.value)*(11/50))).toFixed(4);
     break;
 
+  // rømer to fahrenheit
+    case inputID === temp[6] && outputID === temp[0]:
+      outputValue.value = ((parseFloat(inputValue.value-7.5)*(24/7)+32)).toFixed(4);
+    break;
+
+  // rømer to celsius
+    case inputID === temp[6] && outputID === temp[1]:
+      outputValue.value = ((parseFloat(inputValue.value-7.5)*(40/21))).toFixed(4);
+    break;
+
+  // rømer to kelvin
+    case inputID === temp[6] && outputID === temp[2]:
+      outputValue.value = ((parseFloat(inputValue.value-7.5)*(40/21)+273.15)).toFixed(4);
+    break;
+
+  // rømer to rankine
+    case inputID === temp[6] && outputID === temp[3]:
+      outputValue.value = ((parseFloat(inputValue.value-7.5)*(24/7)+491.67)).toFixed(4);
+    break;
+
+  // rømer to réaumur
+    case inputID === temp[6] && outputID === temp[4]:
+      outputValue.value = ((parseFloat(inputValue.value-7.5)*(32/21))).toFixed(4);
+    break;
+
+  // rømer to delisle
+    case inputID === temp[6] && outputID === temp[5]:
+      outputValue.value = ((parseFloat(60-inputValue.value)*(20/7))).toFixed(4);
+    break;
+
+  // rømer to newton
+    case inputID === temp[6] && outputID === temp[7]:
+      outputValue.value = ((parseFloat(inputValue.value-7.5)*(22/35))).toFixed(4);
+    break;
+
+  // newton to fahrenheit
+    case inputID === temp[7] && outputID === temp[0]:
+      outputValue.value = ((parseFloat(inputValue.value)*(60/11)+32)).toFixed(4);
+    break;
+
+  // newton to celsius
+    case inputID === temp[7] && outputID === temp[1]:
+      outputValue.value = ((parseFloat(inputValue.value)*(100/33))).toFixed(4);
+    break;
+
+  // newton to kelvin
+    case inputID === temp[7] && outputID === temp[2]:
+      outputValue.value = ((parseFloat(inputValue.value)*(100/33)+273.15)).toFixed(4);
+    break;
+
+  // newton to rankine
+    case inputID === temp[7] && outputID === temp[3]:
+      outputValue.value = ((parseFloat(inputValue.value)*(60/11)+491.67)).toFixed(4);
+      break;
+
+  // newton to réaumur
+    case inputID === temp[7] && outputID === temp[4]:
+      outputValue.value = ((parseFloat(inputValue.value)*(80/33))).toFixed(4);
+    break;
+
+  // newton to delisle
+    case inputID === temp[7] && outputID === temp[5]:
+      outputValue.value = ((parseFloat(33-inputValue.value)*(50/11))).toFixed(4);
+    break;
+
+  // newton to rømer
+    case inputID === temp[7] && outputID === temp[6]:
+      outputValue.value = ((parseFloat(inputValue.value)*(35/22)+7.5)).toFixed(4);
+    break;
+
     default:
       console.log("not working");
       outputValue.value = (" ");

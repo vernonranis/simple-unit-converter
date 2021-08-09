@@ -46,18 +46,18 @@
 *delisle to rømer
 *delisle to newton
 
-rømer to fahrenheit
-rømer to celsius
-rømer to kelvin
-rømer to réaumur
-rømer to rankine
-rømer to delisle
-rømer to newton
+*rømer to fahrenheit
+*rømer to celsius
+*rømer to kelvin
+*rømer to réaumur
+*rømer to rankine
+*rømer to delisle
+*rømer to newton
 
-newton to fahrenheit
-newton to celsius
-newton to kelvin
-newton to réaumur
-newton to rankine
-newton to delisle
-newton to rømer
+*newton to fahrenheit
+*newton to celsius
+*newton to kelvin
+*newton to réaumur
+*newton to rankine
+*newton to delisle
+*newton to rømer
