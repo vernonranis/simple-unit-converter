@@ -114,3 +114,9 @@ input {
 .huge {
   font-size: 10rem;
 }
+
+#input-selected,
+#output-selected,
+.hide-this {
+  display: none;
+}
