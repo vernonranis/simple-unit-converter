@@ -10,6 +10,7 @@ a {
 
 h1 {
   font-size: 2.5em;
+  margin: 2em;
 }
 
 h2 {
@@ -119,4 +120,12 @@ input {
 #output-selected,
 .hide-this {
   display: none;
+}
+
+.iconbox a i {
+  color: var(--text-color);
+}
+
+.iconbox {
+  margin: 0 2em;
 }

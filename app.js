@@ -19,37 +19,22 @@ document.querySelector(".btn").addEventListener("click", () =>{
   }
 });
 
-// const selectedInputID = document.querySelector("#input-selected");
-// console.log(selectedInputID.value);
-
-// for (let index = 0; index < inputValueArray.length; index++) {
-//   const element = inputValueArray[index];
-//   const selectedInputID = document.querySelector("#input-selected");
-//   const selectedOutputID = document.querySelector("#output-selected");
-//   // document.querySelectorAll(".input-option option")[index].removeAttribute("disabled", "true");
-
-//   if (selectedInputID.value === temp[index]) {
-//     document.querySelectorAll(".output-option option")[index].setAttribute("disabled", "true");
-//     break
-//   }
-// }
-
 function updateSelectedOption() {
   const currentInputOption = document.querySelector(".input-option").value;
   const currentOutputOption = document.querySelector(".output-option").value;
   const newInputOption = document.querySelectorAll(".input-option option");
   const newOutputOption = document.querySelectorAll(".output-option option");
-  
+
   for (let index = 0; index < newInputOption.length; index++) {
     document.querySelectorAll(".input-option option")[index].removeAttribute("id");
     document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
   }
-  
+
   for (let index = 0; index < newOutputOption.length; index++) {
     document.querySelectorAll(".output-option option")[index].removeAttribute("id");
     document.querySelectorAll(".input-option option")[index].classList.remove("hide-this");
   }
-  
+
   for (let i = 0; i < newInputOption.length; i++) {
     const newInputOptionLoop = newInputOption[i];
     if (currentInputOption === newInputOptionLoop.value) {
@@ -58,7 +43,7 @@ function updateSelectedOption() {
       break
     }
   }
-  
+
   for (let i = 0; i < newOutputOption.length; i++) {
     const newOutputOptionLoop = newOutputOption[i];
     if (currentOutputOption === newOutputOptionLoop.value) {
