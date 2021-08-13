@@ -27,19 +27,19 @@ function updateSelectedOption() {
 
   for (let index = 0; index < newInputOption.length; index++) {
     document.querySelectorAll(".input-option option")[index].removeAttribute("id");
-    document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
+    // document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
   }
 
   for (let index = 0; index < newOutputOption.length; index++) {
     document.querySelectorAll(".output-option option")[index].removeAttribute("id");
-    document.querySelectorAll(".input-option option")[index].classList.remove("hide-this");
+    // document.querySelectorAll(".input-option option")[index].classList.remove("hide-this");
   }
 
   for (let i = 0; i < newInputOption.length; i++) {
     const newInputOptionLoop = newInputOption[i];
     if (currentInputOption === newInputOptionLoop.value) {
       document.querySelectorAll(".input-option option")[i].setAttribute("id", "input-selected");
-      document.querySelectorAll(".output-option option")[i].setAttribute("class", "hide-this");
+      // document.querySelectorAll(".output-option option")[i].setAttribute("class", "hide-this");
       break
     }
   }
@@ -48,7 +48,7 @@ function updateSelectedOption() {
     const newOutputOptionLoop = newOutputOption[i];
     if (currentOutputOption === newOutputOptionLoop.value) {
       document.querySelectorAll(".output-option option")[i].setAttribute("id", "output-selected");
-      document.querySelectorAll(".input-option option")[i].setAttribute("class", "hide-this");
+      // document.querySelectorAll(".input-option option")[i].setAttribute("class", "hide-this");
       break
     }
   }
@@ -62,8 +62,8 @@ function compute() {
   switch (true) {
      // fahrenheit to celsius
     case inputID === temp[0] && outputID === temp[1]:
-      outputValue.value = ((5/9)*(parseFloat(inputValue.value)-32)).toFixed(4);
-      break;
+      outputValue.value = ((5/9)*((parseFloat(inputValue.value))-32)).toFixed(4);
+    break;
 
     // fahrenheit to kelvin
     case inputID === temp[0] && outputID === temp[2]:

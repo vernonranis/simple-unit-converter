@@ -10,7 +10,7 @@ a {
 
 h1 {
   font-size: 2.5em;
-  margin: 2em;
+  margin: 1em;
 }
 
 h2 {
@@ -110,10 +110,6 @@ input {
 }
 .btn:hover {
   color: var(--primary-color);
-}
-
-.huge {
-  font-size: 10rem;
 }
 
 #input-selected,
