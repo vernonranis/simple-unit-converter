@@ -27,7 +27,7 @@ function updateSelectedOption() {
 
   for (let index = 0; index < newInputOption.length; index++) {
     document.querySelectorAll(".input-option option")[index].removeAttribute("id");
-    // document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
+    document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
   }
 
   for (let index = 0; index < newOutputOption.length; index++) {
