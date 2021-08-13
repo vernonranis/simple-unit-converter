@@ -25,7 +25,7 @@
   <title>Simple Temperature Converter</title>
 </head>
 
-<body onload="updateSelectedOption()">
+<body>
   <div class="wrapper bg-1">
     <header class="header">
       <a href="#" onclick="window.location.reload()">
@@ -39,7 +39,7 @@
             <label for="input"></label>
             <select name="input" class="options input-option" onchange="updateSelectedOption()">
               <option class="input" id="input-selected" value="fahrenheit" selected>Fahrenheit</option>
-              <option class="input" value="celsius">Celsius</option>
+              <option class="input hide-this" value="celsius">Celsius</option>
               <option class="input" value="kelvin">Kelvin</option>
               <option class="input" value="rankine">Rankine</option>
               <option class="input" value="réaumur">Réaumur</option>
@@ -53,7 +53,7 @@
             <label for="output"></label>
             <!-- <select name="output" class="options output-option"> -->
             <select name="output" class="options output-option" onchange="updateSelectedOption();">
-              <option class="output" value="fahrenheit">Fahrenheit</option>
+              <option class="output hide-this" value="fahrenheit">Fahrenheit</option>
               <option class="output" id="output-selected" value="celsius" selected>Celsius</option>
               <option class="output" value="kelvin">Kelvin</option>
               <option class="output" value="rankine">Rankine</option>

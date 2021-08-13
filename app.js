@@ -1,6 +1,11 @@
 // TODO tab title name should be whatever it is we are converting
+let currentInputOption;
+let currentOutputOption;
+
 
 const temp = ["fahrenheit",  "celsius", "kelvin", "rankine", "réaumur", "delisle", "rømer", "newton"];
+
+let hasValue = false;
 
 const inputValue = document.querySelector('.input-field');
 const inputValueArray = document.querySelectorAll('.input-option option');
@@ -10,6 +15,12 @@ const outputValue = document.querySelector('.output-field');
 document.querySelector(".btn").addEventListener("click", () =>{
   const inputType = document.querySelector(".input-option").value;
   const outputType = document.querySelector(".output-option").value;
+  const inputField = document.querySelector(".input-field");
+
+  console.log("input",currentInputOption);
+  console.log("output",currentOutputOption);
+
+  hasValue = inputField.value ? true : false;
 
   if (document.querySelector(".input-option option").className === "input"){
     document.querySelector(".input-option").value = outputType;
@@ -19,45 +30,59 @@ document.querySelector(".btn").addEventListener("click", () =>{
   }
 });
 
+
 function updateSelectedOption() {
-  const currentInputOption = document.querySelector(".input-option").value;
-  const currentOutputOption = document.querySelector(".output-option").value;
-  const newInputOption = document.querySelectorAll(".input-option option");
-  const newOutputOption = document.querySelectorAll(".output-option option");
+  currentInputOption = document.querySelector(".input-option").value;
+  currentOutputOption = document.querySelector(".output-option").value;
+  let newInputOption = document.querySelectorAll(".input-option option");
+  let newOutputOption = document.querySelectorAll(".output-option option");
 
-  for (let index = 0; index < newInputOption.length; index++) {
-    document.querySelectorAll(".input-option option")[index].removeAttribute("id");
-    document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
-  }
+  // for (let index = 0; index < newInputOption.length; index++) {
+  //   document.querySelectorAll(".input-option option")[index].removeAttribute("id");
+  //   document.querySelectorAll(".output-option option")[index].classList.remove("hide-this");
+  //   // if (newOutputOption[index].classList.contains("hide-this")) {
+  //   //   newInputOption[index].classList.remove("hide-this");
+  //   // }
+  // }
 
-  for (let index = 0; index < newOutputOption.length; index++) {
-    document.querySelectorAll(".output-option option")[index].removeAttribute("id");
-    // document.querySelectorAll(".input-option option")[index].classList.remove("hide-this");
-  }
+  // for (let index = 0; index < newOutputOption.length; index++) {
+  //   document.querySelectorAll(".output-option option")[index].removeAttribute("id");
+  //   document.querySelectorAll(".input-option option")[index].classList.remove("hide-this");
+  //   // if (newInputOption[index].classList.contains("hide-this")) {
+  //     //   newOutputOption[index].classList.remove("hide-this");
+  //   // }
+  // }
 
-  for (let i = 0; i < newInputOption.length; i++) {
-    const newInputOptionLoop = newInputOption[i];
-    if (currentInputOption === newInputOptionLoop.value) {
-      document.querySelectorAll(".input-option option")[i].setAttribute("id", "input-selected");
-      // document.querySelectorAll(".output-option option")[i].setAttribute("class", "hide-this");
-      break
-    }
-  }
+  // for (let i = 0; i < newInputOption.length; i++) {
+  //   const newInputOptionLoop = newInputOption[i];
+  //   if (currentInputOption === newInputOptionLoop.value) {
+  //     document.querySelectorAll(".input-option option")[i].setAttribute("id", "input-selected");
+  //     document.querySelectorAll(".output-option option")[i].classList.add("hide-this");
+  //     break
+  //   }
+  // }
+  console.log("input:", currentInputOption);
+  console.log("output", currentOutputOption);
 
   for (let i = 0; i < newOutputOption.length; i++) {
-    const newOutputOptionLoop = newOutputOption[i];
-    if (currentOutputOption === newOutputOptionLoop.value) {
-      document.querySelectorAll(".output-option option")[i].setAttribute("id", "output-selected");
-      // document.querySelectorAll(".input-option option")[i].setAttribute("class", "hide-this");
-      break
+    // const newOutputOptionLoop = newOutputOption[i];
+    console.log(newOutputOption[i].value);
+    if (newOutputOption[i].value === currentOutputOption) {
+      newOutputOption[i].setAttribute("id", "output-selected");
+      newOutputOption[i].classList.add("hide-this");
+      // break
     }
   }
   compute();
 }
 
+
 function compute() {
   const inputID = document.querySelector("#input-selected").value;
   const outputID = document.querySelector("#output-selected").value;
+
+
+      if (hasValue) {
 
   switch (true) {
      // fahrenheit to celsius
@@ -345,6 +370,7 @@ function compute() {
       console.log("not working");
       outputValue.value = (" ");
       break;
+      }
   }
 }
 inputValue.addEventListener("input", () =>{
