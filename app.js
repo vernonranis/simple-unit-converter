@@ -6,6 +6,7 @@ const inputValue = document.querySelector('.input-field');
 const inputValueArray = document.querySelectorAll('.input-option option');
 const outputValue = document.querySelector('.output-field');
 
+
 let hasValue = false;
 
 
@@ -61,7 +62,9 @@ function updateSelectedOption() {
 function compute() {
   const inputID = document.querySelector("#input-selected").value;
   const outputID = document.querySelector("#output-selected").value;
+  const inputField = document.querySelector(".input-field");
 
+  hasValue = inputField.value ? true : false;
   if (hasValue) {
 
     switch (true) {
@@ -354,5 +357,6 @@ function compute() {
   }
 }
 inputValue.addEventListener("input", () =>{
+  inputValue.value === "" ? outputValue.value = "":
   compute();
 });
