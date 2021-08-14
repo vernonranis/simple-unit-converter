@@ -16,12 +16,10 @@ document.querySelector(".btn").addEventListener("click", () =>{
 
   hasValue = inputField.value ? true : false;
 
-  if (document.querySelector(".input-option option").className === "input"){
-    document.querySelector(".input-option").value = outputType;
-    document.querySelector(".output-option").value = inputType;
-    updateSelectedOption();
-    compute();
-  }
+  document.querySelector(".input-option").value = outputType;
+  document.querySelector(".output-option").value = inputType;
+  updateSelectedOption();
+  compute();
 });
 
 function updateSelectedOption() {
