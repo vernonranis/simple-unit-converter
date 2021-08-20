@@ -15,6 +15,7 @@ document.querySelector(".btn").addEventListener("click", () =>{
   const outputType = document.querySelector(".output-option").value;
   const inputField = document.querySelector(".input-field");
 
+  // TODO convert this to && operator
   hasValue = inputField.value ? true : false;
 
   document.querySelector(".input-option").value = outputType;
