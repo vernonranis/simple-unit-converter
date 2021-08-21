@@ -23,7 +23,8 @@ document.querySelector('.btn').addEventListener('click', () => {
   const inputField = document.querySelector('.input-field');
 
   // TODO convert this to && operator
-  hasValue = inputField.value ? true : false;
+  // hasValue = inputField.value ? true : false;
+  hasValue = inputField.value && true;
 
   document.querySelector('.input-option').value = outputType;
   document.querySelector('.output-option').value = inputType;
@@ -89,7 +90,10 @@ function compute() {
   const outputID = document.querySelector('#output-selected').value;
   const inputField = document.querySelector('.input-field');
 
-  hasValue = inputField.value ? true : false;
+  // TODO convert this to && operator
+  // hasValue = inputField.value ? true : false;
+  hasValue = inputField.value && true;
+
   if (hasValue) {
     switch (true) {
       // fahrenheit to celsius
