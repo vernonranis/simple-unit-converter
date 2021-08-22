@@ -22,8 +22,6 @@ document.querySelector('.btn').addEventListener('click', () => {
   const outputType = document.querySelector('.output-option').value;
   const inputField = document.querySelector('.input-field');
 
-  // TODO convert this to && operator
-  // hasValue = inputField.value ? true : false;
   hasValue = inputField.value && true;
 
   document.querySelector('.input-option').value = outputType;
@@ -90,8 +88,6 @@ function compute() {
   const outputID = document.querySelector('#output-selected').value;
   const inputField = document.querySelector('.input-field');
 
-  // TODO convert this to && operator
-  // hasValue = inputField.value ? true : false;
   hasValue = inputField.value && true;
 
   if (hasValue) {
@@ -252,8 +248,7 @@ function compute() {
         outputValue.value = (parseFloat(inputValue.value) - 459.67).toFixed(4);
         break;
 
-      // TODO  rankine to celsius check why there is an output even though there is no input.
-      // write an if statement that if the input is empty then output should also be empty
+      // rankine to celsius
       case inputID === temp[3] && outputID === temp[1]:
         outputValue.value = (
           parseFloat(inputValue.value - 491.67) *
